@@ -1,0 +1,65 @@
+<output>
+	id 0
+	outaddr 192.168.1.200 222
+	packetsize 380
+</output>
+
+<output>
+	id 1
+	outaddr 192.168.2.200 222
+	packetsize 380
+</output>
+
+<output>
+#eth6 192.168.3.1
+	id 2
+	outaddr 192.168.3.200 222
+	packetsize 380
+</output>
+
+<output>
+	id 3
+	outaddr 192.168.4.200 222
+	packetsize 380
+</output>
+
+<output>
+	id 4
+	outaddr 192.168.5.200 222
+	packetsize 380
+</output>
+
+serverip 10.10.10.21
+###
+
+#################################
+## out0 ########## 
+
+### reserv from satellite without ikutstk vstavok
+#<streamer>                                                                                                                                                                        
+#	port 1099                                                                                                                               
+#	services defined                                                                                                                                                          
+#	#       #{first},{all},{defined}                                                                                                                                          
+##	<service> # perviy                                                                                                                                                        
+#		service 0x0001                                                                                                                                                     
+##		out 0                                                                                                                                                              
+#		encrypt 0                                                                                                                                                          
+#		remap 0x310                                                                                                                                                        
+##		DubIP 238.0.1.1 eth1 1234                                                                                                                                          
+##		DubTTL 50                                                                                                                                                         
+#	</service>
+#</streamer>
+
+<encoder>
+        name "name"
+        encoderip 10.10.10.66 1066
+	vpid 0x20
+	apid 0x21
+	remap 0x300
+	encrypt 0
+	out 0
+
+	dubip 238.0.1.1 eth1 1234
+	dubttl 50
+</encoder>
+
